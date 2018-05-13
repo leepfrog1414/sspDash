@@ -1,0 +1,13 @@
+<div id="search-component">
+  Search for a SSP Here:
+  
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let ssp of sspList$ | async" >
+      <a routerLink="/detail/{{ssp.id}}">
+        {{ssp.name}}
+      </a>
+    </li>
+  </ul>
+</div>

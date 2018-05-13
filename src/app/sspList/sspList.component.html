@@ -1,0 +1,21 @@
+<h2>"Your Sid" SSPList</h2>
+
+<!-- <div>
+  <label>Ssp name:
+    <input #heroName />
+  </label>
+  (click) passes input value to add() and then clears the input
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div> -->
+
+<ul class="sspList">
+  <li *ngFor="let ssp of sspList">
+    <a routerLink="/detail/{{ssp.id}}">
+      <span class="badge">{{ssp.id}}</span> {{ssp.name}}
+    </a>
+    <!-- <button class="delete" title="delete ssp"
+    (click)="delete(ssp)">x</button> -->
+  </li>
+</ul>

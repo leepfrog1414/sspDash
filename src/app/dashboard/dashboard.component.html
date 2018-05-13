@@ -1,0 +1,11 @@
+<h3>Sid: "users sid here"</h3>
+<app-ssp-search></app-ssp-search>
+<div class="grid grid-pad">
+  <a *ngFor="let ssp of sspList" class="col-1-4"
+      routerLink="/detail/{{ssp.id}}">
+    <div class="module ssp">
+      <h4>{{ssp.name}}</h4>
+    </div>
+  </a>
+</div>
+
